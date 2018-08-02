@@ -13,6 +13,6 @@ Rails.application.routes.draw do
   resources :rep_mails, only: [:index]
   # get '/snacks/', to: 'snacks#index'
 
-  get '/rep_mail', to:"rep_mailer#rep_mailer"
+  post '/rep_mail', to:"rep_mailer#rep_mailer"
 
 end

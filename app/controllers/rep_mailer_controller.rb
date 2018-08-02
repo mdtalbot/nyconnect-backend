@@ -1,7 +1,9 @@
 class RepMailerController < ApplicationController
 
   def rep_mailer
-    UserMailer.rep_email(User.first).deliver_now
+
+    # byebug
+    UserMailer.rep_email(params[:address], params[:message]).deliver_now
 
     render json: {
         username: User.first.username,
